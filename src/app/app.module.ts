@@ -3,16 +3,19 @@ import { NgModule } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatGridListModule } from '@angular/material/grid-list';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { GameStartComponent } from './games/game-start/game-start.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CardCreateComponent } from './cards/card-create/card-create.component';
+import { CardShowComponent } from './cards/card-show/card-show.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    GameStartComponent
+    CardCreateComponent,
+    CardShowComponent
   ],
   imports: [
     BrowserModule,
@@ -20,7 +23,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MatButtonModule,
     BrowserAnimationsModule,
     MatCardModule,
-    MatGridListModule
+    MatGridListModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

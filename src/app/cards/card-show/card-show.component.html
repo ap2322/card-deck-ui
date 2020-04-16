@@ -1,0 +1,11 @@
+<h1>Game show component</h1>
+
+<mat-grid-list cols="13" rowHeight="100px" gutterSize="15px">
+  <mat-grid-tile
+      *ngFor="let card of cards"
+      [colspan]="card.cols"
+      [rowspan]="card.rows"
+      [style.background]="card.color">
+    {{card.suitValue}}
+  </mat-grid-tile>
+</mat-grid-list>
