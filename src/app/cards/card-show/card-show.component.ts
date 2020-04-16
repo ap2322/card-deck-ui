@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { CardsService } from '../cards.service';
 
 import { Card } from '../card.model';
 
@@ -10,8 +11,16 @@ import { Card } from '../card.model';
 })
 
 export class CardShowComponent {
-  cards: Card[] = [
-    {suitValue: 'One', cols: 1, rows: 1, color: 'lightblue'},
-    {suitValue: 'Two', cols: 1, rows: 1, color: 'lightgreen'},
-  ];
+  cards: Card[] = [];
+
+  constructor(public cardsService: CardsService) {}
+
+  ngOnInit() {
+    console.log("onDeal")
+    this.cardsService.addCards()
+  }
+  // onDeal() {
+  //   console.log("onDeal")
+  //   this.cardsService.addCards()
+  // }
 }
