@@ -7,14 +7,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { GameStartComponent } from './games/game-start/game-start.component';
-import { GameShowComponent } from './games/game-show/game-show.component';
+import { CardCreateComponent } from './cards/card-create/card-create.component';
+import { CardShowComponent } from './cards/card-show/card-show.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    GameStartComponent,
-    GameShowComponent
+    CardCreateComponent,
+    CardShowComponent
   ],
   imports: [
     BrowserModule,
