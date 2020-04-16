@@ -8,5 +8,5 @@ import { ActivatedRoute } from '@angular/router';
 })
 
 export class CardCreateComponent {
-  welcome = "Start Game"
+
 }

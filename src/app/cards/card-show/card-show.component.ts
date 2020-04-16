@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { CardsService } from '../cards.service';
+import { Subscription } from 'rxjs';
 
 import { Card } from '../card.model';
+import { CardsService } from '../cards.service';
 
 @Component({
   selector: 'app-card-show',
@@ -10,17 +11,17 @@ import { Card } from '../card.model';
   styleUrls: ['./card-show.component.css']
 })
 
-export class CardShowComponent {
+export class CardShowComponent implements OnInit  {
   cards: Card[] = [];
+  private cardsSub: Subscription;
 
   constructor(public cardsService: CardsService) {}
 
   ngOnInit() {
-    console.log("onDeal")
-    this.cardsService.addCards()
+    this.cardsService.addCards();
+    this.cardsSub = this.cardsService.getCardListener()
+      .subscribe((cards: Card[]) => {
+        this.cards = cards;
+      })
   }
-  // onDeal() {
-  //   console.log("onDeal")
-  //   this.cardsService.addCards()
-  // }
 }
