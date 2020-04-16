@@ -2,3 +2,24 @@
 @import '@angular/material/prebuilt-themes/deeppurple-amber.css';
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.mat-button.mat-deal,
+.mat-stroked-button.mat-deal {
+    color: #BC2327;
+}
+.mat-button.mat-deal:hover,
+.mat-stroked-button.mat-deal:hover {
+  background-color: #f0fff3;
+}
+
+.mat-raised-button.mat-deal,
+.mat-flat-button.mat-deal,
+.mat-fab.mat-deal,
+.mat-mini-fab.mat-deal {
+  color: #f0fff3;
+  background-color: #BC2327;
+}
+
+.mat-icon-button.mat-deal {
+  color:#BC2327;
+}
