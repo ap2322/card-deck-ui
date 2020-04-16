@@ -1,0 +1,26 @@
+.game-start-card {
+  max-width: 400px;
+  margin: auto
+}
+
+.game-card {
+  width: 80px;
+  height: 120px;
+  background: #225D71;
+}
+
+mat-card-content {
+  display: flex;
+  flex-direction: row;
+}
+
+.button-contain {
+  display: flex;
+  flex-direction: column;
+  padding-top: 45px;
+  padding-left: 30px;
+}
+
+mat-button {
+  margin-top: 40px;
+}
