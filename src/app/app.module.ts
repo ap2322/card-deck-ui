@@ -10,12 +10,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CardCreateComponent } from './cards/card-create/card-create.component';
 import { CardShowComponent } from './cards/card-show/card-show.component';
+import { GameHeaderComponent } from './games/game-header/game-header.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CardCreateComponent,
-    CardShowComponent
+    CardShowComponent,
+    GameHeaderComponent
   ],
   imports: [
     BrowserModule,
