@@ -24,12 +24,15 @@ The cards and calculations are generated with the [card-deck-service](https://gi
 ### Technology Used
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.1.
 
+### Testing
+The testing suite is with Jasmine and Karma as integrated through the Angular CLI ([angular.io/testing](https://angular.io/guide/testing)). To run the test suite after installation, run `ng test`.
+
 ### Core Contributors
 - [Alice Post](https://github.com/ap2322)
 
 ### Process
 This project was built as a first foray into using the MongoDB, Express, Angular, and Nodejs (MEAN) stack. Issues and progress was tracked on the Github Project Board: https://github.com/users/ap2322/projects/2. When approaching this project, a stronger skillset in Node and Express meant this was built with a back-end first, with test-driven development. Since Angular was a new framework, the primary goal was simply functionality. 
 
-Some of the larger struggle points of this project included learning how to interact with MongoDB on the backend and the flow of information through the Angular framework. After overcoming conceptual hurdles around Angular Observables, the basic functionality of the application came together.
+Some of the larger struggle points of this project included learning how to interact with MongoDB on the backend and the flow of information through the Angular framework. After overcoming conceptual hurdles around Angular Observables, the basic functionality of the application came together. One area of improvement on the Angular front end is to include more robust testing.
 
-Big wins of this challenge were learning new technologies and implementing them in a functional application!
+Big wins of this challenge were learning new technologies and implementing them in a functional application! 
