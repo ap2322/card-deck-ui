@@ -1,2 +1,3 @@
 <h1>i'm the game header</h1>
-<p>Percent Correct: {{game.percentCorrect}} and my color is {{game.cards[0].color}}</p>
+<p>Percent Correct: {{game.percentCorrect}} and my first card value is {{ game.cards[0].suitValue}} color is {{game.cards[0].color}}</p>
+<button mat-raised-button color="accent" (click)="onDealAgain()">Deal Again</button>

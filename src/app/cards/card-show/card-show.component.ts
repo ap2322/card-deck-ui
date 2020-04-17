@@ -3,7 +3,8 @@ import { ActivatedRoute } from '@angular/router';
 import { Subscription } from 'rxjs';
 
 import { Card } from '../card.model';
-import { CardsService } from '../cards.service';
+import { Game } from '../../games/game.model';
+import { GamesService } from '../../games/games.service';
 
 @Component({
   selector: 'app-card-show',
@@ -13,15 +14,16 @@ import { CardsService } from '../cards.service';
 
 export class CardShowComponent implements OnInit  {
   cards: Card[] = [];
-  private cardsSub: Subscription;
+  game: Game;
+  private gamesSub: Subscription;
 
-  constructor(public cardsService: CardsService) {}
+  constructor(public gamesService: GamesService) {}
 
   ngOnInit() {
-    this.cardsService.addCards();
-    this.cardsSub = this.cardsService.getCardListener()
-      .subscribe((cards: Card[]) => {
-        this.cards = cards;
+    // this.cardsService.addCards();
+    this.gamesSub = this.gamesService.getGameListener()
+      .subscribe((game: Game) => {
+        this.cards = game.cards;
       })
   }
 }
