@@ -1,0 +1,12 @@
+<mat-grid-list cols="13" rowHeight="60px">
+  <mat-grid-tile colspan="8" rowspan="1">
+    <h2>% Correct Scores:</h2>
+    <ul *ngIf="game">
+      <li>Current Deck {{(game.percentCorrect * 100).toFixed(0)}}%</li>
+      <li>Historical Average {{(game.historicalAverage * 100).toFixed(0)}}%</li>
+    </ul>
+  </mat-grid-tile>
+  <mat-grid-tile colspan="3" rowspan="1">
+    <button mat-raised-button color="accent" (click)="onDealAgain()">Deal Again</button>
+  </mat-grid-tile>
+</mat-grid-list>
