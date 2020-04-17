@@ -1,5 +1,7 @@
 # Card Deck Ui
 
+[Play the game online](http://card-deck-ui.s3-website.us-east-2.amazonaws.com/)
+
 ### Introduction
 
 This interface is a very simple card game. You press a button, cards are dealt, and you see the percent correct score as well as the average percent correct score of all games played. Is it fun? Well, that depends on your version of fun.
