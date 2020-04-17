@@ -4,12 +4,10 @@ import { Router } from '@angular/router';
 import { Card } from '../cards/card.model';
 import { Game } from './game.model';
 import { Subject } from 'rxjs';
-// import { from } from 'rxjs';
-// import {map} from 'rxjs/operators';
 import {Observable} from 'rxjs';
-// import { environment } from "../../environments/environment";
-//
-// const BACKEND_URL = environment.apiUrl + "/api/v1/";
+import { environment } from "../../environments/environment";
+
+const BACKEND_URL = environment.apiUrl + "/api/v1/";
 
 @Injectable({
   providedIn: 'root'
@@ -28,7 +26,7 @@ export class GamesService {
 
 
   addGame() {
-    this.http.post<{message:string, data: any}>("http://localhost:3000/api/v1/deal", "")
+    this.http.post<{message:string, data: any}>(`${BACKEND_URL}deal`, "")
       .subscribe((responseData) => {
         let cardMatrix = responseData.data.dealtCardMatrix;
         let newGame = {
