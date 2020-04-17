@@ -32,7 +32,8 @@ export class GamesService {
       .subscribe((responseData) => {
         let cardMatrix = responseData.data.dealtCardMatrix;
         let newGame = {
-          percentCorrect: responseData.data.percentCorrect,
+          percentCorrect: responseData.data.percentCorrect.toFixed(2),
+          historicalAverage: responseData.data.statistics.averagePercentageCorrect.toFixed(2),
           cards: this.makeCards(cardMatrix)
         }
         this.game = newGame;
