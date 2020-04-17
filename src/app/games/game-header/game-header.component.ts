@@ -7,7 +7,8 @@ import { GamesService } from '../games.service';
 
 @Component({
   selector: 'app-game-header',
-  templateUrl: './game-header.component.html'
+  templateUrl: './game-header.component.html',
+  styleUrls: ['./game-header.component.css']
 })
 
 export class GameHeaderComponent implements OnInit   {
@@ -17,7 +18,6 @@ export class GameHeaderComponent implements OnInit   {
   constructor(public gamesService: GamesService) {}
 
   ngOnInit() {
-    this.gamesService.addGame();
     this.gamesSub = this.gamesService.getGameListener()
       .subscribe((game: Game)=> {
         this.game = game;
